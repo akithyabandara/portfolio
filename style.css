@@ -1,0 +1,220 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+/*BACKGROUND*/
+body {
+    background-image: url("images/wallpaper3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*TEXT REVEAL*/
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*NAVIGATION*/
+.nav-link {
+  margin: 0 5px; /* Adds space between the buttons */
+    background-color: white;
+}
+.nav-item a{
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 17px;
+    margin-left: 35px;
+    width: fit-content;
+    border-bottom: 3px solid transparent;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    
+}
+.nav-item a:hover{
+    border-bottom: 3px solid #fe65d7;
+}
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 1rem;
+        margin: 1rem;
+        margin-top: 15px;
+        border: 1px solid black;
+    }
+}
+.navbar-toggler-icon {
+    font-size: 1rem;
+}
+.navbar-brand img:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+
+/*MAIN SECTION*/
+.container {
+  min-height: 700px;
+}
+/*h1 Default*/
+.main h1{
+    font-size: 11rem;
+    font-weight: 700;
+}
+/* h1 Breakpoint for Tablets (768px and smaller) */
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 109px;
+  }
+}
+/* h1 Breakpoint for Mobile Phones (480px and smaller) */
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 75px;
+  }
+}
+/* h6 Breakpoint for Tablets (768px and smaller) */
+@media (max-width: 768px) {
+  .main h6 {
+    font-size: 13px;
+  }
+}
+/* h6 Breakpoint for Tablets (768px and smaller) */
+@media (max-width: 480px) {
+  .main h6 {
+    font-size: 14px;
+  }
+}
+
+.social-icons a{
+    display: inline-flex;
+    font-size: 1.7rem;
+    padding: 0.30rem;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+    margin: 1rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+    color: #fe65d7;
+    background-color: black;
+    transform: scale(1.2);
+}
+
+/*SCROLLING TEXT*/
+.scroller {
+    padding-block: 8px;
+    border-block: 1px solid;
+    background-color: white;
+    overflow: hidden;
+    user-select: none;
+}
+.scroller-inner{
+    display: flex; gap: var(--gap); --gap: 20px;
+    animation: scroll 20s linear infinite;
+    justify-content: space-between;
+}
+.scroller-inner:hover {
+    animation-play-state: paused;
+}
+@keyframes scroll {
+    to{
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+.scroller-item {
+    font-size: 1rem; font-weight: bold;
+    display:flex;
+    align-items:center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+/*PROJECTS*/
+.project container {
+    min-height:700px
+}
+.project h1{
+    font-size: 9rem;
+    font-weight: 700;
+}
+.mainheading h1{
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+/*ABOUT ME*/
+.about {
+    min-height: 470px;
+}
+
+/*FOOTER*/
+.footer{
+    background-color: white;
+    border: 1px solid black;
+}
+.footer-icons a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+.footer-icons a:hover{
+    color: #fe65d7;
+    transform: scale(1.2);
+}
+
+/*WORK*/
+#maxCarousel .carousel-item img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: contain;
+    background-color: #000;
+}
+.carousel-item img {
+  transition: filter 0.3s ease;
+}
+.carousel-item img:not(#maxModal img):hover {
+  filter: brightness(50%);
+}
+
+/*MY WORK GALLERY*/
+  .gallery-wrapper img {
+    transition: filter 0.3s ease;
+  }
+  .hover-overlay {
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    transition: opacity 0.3s ease;
+  }
+  .gallery-wrapper:hover img {
+    filter: brightness(50%);
+  }
+  .gallery-wrapper:hover .hover-overlay {
+    opacity: 1;
+  }
+
+
+
+
+
